@@ -141,7 +141,7 @@ public class DataLabelTemplateConverter : IValueConverter
 
  ## Output
 
- ![Adornments lables for grouped values in WPF Circular chart](image.png)
+ <img width="808" height="475" alt="Adornments lables for grouped values in WPF Circular chart" src="https://github.com/user-attachments/assets/e94ac551-5492-4d9c-b808-383fd15d342a" />
 
  ## Troubleshooting
 
@@ -149,4 +149,4 @@ public class DataLabelTemplateConverter : IValueConverter
 
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
 
-For more details, refer to the KB on [how to show adornment labels for grouped values in Syncfusion WPF Circular chart control?]().
+For more details, refer to the KB on [how to show adornment labels for grouped values in Syncfusion WPF Circular chart control?](https://support.syncfusion.com/kb/article/21684/how-to-show-adornment-labels-for-grouped-values-in-wpf-circular-chart).
