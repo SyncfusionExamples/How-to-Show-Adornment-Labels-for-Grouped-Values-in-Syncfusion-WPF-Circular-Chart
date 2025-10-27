@@ -143,8 +143,6 @@ public class DataLabelTemplateConverter : IValueConverter
 
  ![Chart adornment grouped values](https://github.com/user-attachments/assets/e94ac551-5492-4d9c-b808-383fd15d342a)
 
- <img width="808" height="475" alt="Adornments lables for grouped values in WPF Circular chart" src="" />
-
  ## Troubleshooting
 
 #### Path too long exception
