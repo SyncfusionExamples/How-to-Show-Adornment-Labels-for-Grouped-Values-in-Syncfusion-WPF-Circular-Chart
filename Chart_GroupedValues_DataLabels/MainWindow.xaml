@@ -28,6 +28,10 @@
     <Grid>
         <chart:SfChart Margin="20">
 
+            <chart:SfChart.Header>
+                <TextBlock FontSize="14" Text="Visualizing Country Contributions with Custom Labels" FontWeight="Bold" Margin="10"/>
+            </chart:SfChart.Header>
+
             <chart:PieSeries x:Name="pieSeries"
                              ItemsSource="{Binding CountryData}"
                              XBindingPath="Country"

@@ -141,7 +141,7 @@ public class DataLabelTemplateConverter : IValueConverter
 
  ## Output
 
- ![Chart adornment grouped values](https://github.com/user-attachments/assets/e94ac551-5492-4d9c-b808-383fd15d342a)
+ ![Chart adornment grouped values](https://github.com/user-attachments/assets/82983554-61a6-43c5-9e25-47c55370983f)
 
  ## Troubleshooting
 
