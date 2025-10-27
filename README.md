@@ -31,7 +31,7 @@ Define the [PieSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Cha
 </chart:SfChart> 
  ```
 
-**Step 3:** Enable Data Label
+**Step 3: Enable Data Label**
 
 Use [ChartAdornmentInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Charts.ChartAdornmentInfo.html) to show labels and connector lines. For more details, refer to the [Adornments UG Documentation](https://help.syncfusion.com/wpf/charts/adornments/label).
 
