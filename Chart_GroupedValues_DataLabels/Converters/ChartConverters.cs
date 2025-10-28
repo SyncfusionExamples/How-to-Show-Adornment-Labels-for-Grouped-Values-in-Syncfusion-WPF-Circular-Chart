@@ -15,20 +15,20 @@
             if (value is ChartPieAdornment adornment)
             {
                 // Case 1: Single item
-                if (adornment.Item is CountryInfo model)
+                if (adornment.Item is ProductSales model)
                 {
-                    return $"{model.Country} : {model.Count}";
+                    return $"{model.Product} : {model.SalesRate}";
                 }
-                // Case 2: Grouped items (e.g., List<CountryInfo>)
+                // Case 2: Grouped items (e.g., List<ProductSales>)
                 else if (adornment.Item is IEnumerable<object> group)
                 {
                     var lines = new List<string>();
 
                     foreach (var item in group)
                     {
-                        if (item is CountryInfo country)
+                        if (item is ProductSales product)
                         {
-                            lines.Add($"{country.Country} : {country.Count}");
+                            lines.Add($"{product.Product} : {product.SalesRate}");
                         }
                     }
 

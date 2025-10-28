@@ -20,9 +20,9 @@ Define the [PieSeries](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Cha
 . . . 
 
     <chart:PieSeries x:Name="pieSeries"
-                     ItemsSource="{Binding CountryData}"
-                     XBindingPath="Country"
-                     YBindingPath="Count"
+                     ItemsSource="{Binding Data}"
+                     XBindingPath="Product"
+                     YBindingPath="SalesRate"
                      GroupMode="Value"
                      GroupTo="1000"
     </chart:PieSeries>
@@ -79,7 +79,7 @@ Use [ChartAdornmentInfo](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.C
 
 **Step 5: Implement Converters**
 
- This converter formats pie chart labels by extracting and displaying country names and their counts. It handles both single CountryInfo items and grouped collections, returning a readable label string for each chart segment.
+ This converter formats pie chart labels by extracting and displaying product names and their sales rate. It handles both single ProductSales items and grouped collections, returning a readable label string for each chart segment.
 
  **[C#]**
 
@@ -90,26 +90,26 @@ public class DataLabelTemplateConverter : IValueConverter
    {
        if (value is ChartPieAdornment adornment)
        {
-           // Case 1: Single item
-           if (adornment.Item is CountryInfo model)
-           {
-               return $"{model.Country} : {model.Count}";
-           }
-           // Case 2: Grouped items (e.g., List<CountryInfo>)
-           else if (adornment.Item is IEnumerable<object> group)
-           {
-               var lines = new List<string>();
+            // Case 1: Single item
+            if (adornment.Item is ProductSales model)
+            {
+                return $"{model.Product} : {model.SalesRate}";
+            }
+            // Case 2: Grouped items (e.g., List<ProductSales>)
+            else if (adornment.Item is IEnumerable<object> group)
+            {
+                var lines = new List<string>();
 
-               foreach (var item in group)
-               {
-                   if (item is CountryInfo country)
-                   {
-                       lines.Add($"{country.Country} : {country.Count}");
-                   }
-               }
+                foreach (var item in group)
+                {
+                    if (item is ProductSales product)
+                    {
+                        lines.Add($"{product.Product} : {product.SalesRate}");
+                    }
+                }
 
-               return string.Join("\n", lines);
-           }
+                return string.Join("\n", lines);
+            }
        }
 
        return value;

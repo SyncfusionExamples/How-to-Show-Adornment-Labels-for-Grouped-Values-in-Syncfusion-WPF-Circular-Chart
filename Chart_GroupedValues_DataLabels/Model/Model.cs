@@ -1,8 +1,8 @@
 ﻿namespace Chart_GroupedValues_DataLabels
 {
-    public class CountryInfo
+    public class ProductSales
     {
-        public string? Country { get; set; }
-        public int Count { get; set; }
+        public string? Product { get; set; }
+        public double SalesRate { get; set; }
     }
 }
